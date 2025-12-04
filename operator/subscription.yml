@@ -1,0 +1,11 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: my-operator-subscription # Choose a descriptive name
+  namespace: target-namespace # The namespace where the Operator will be installed
+spec:
+  channel: stable-2.6 # Or the appropriate channel for your Operator (e.g., "alpha", "techpreview")
+  installPlanApproval: Automatic # Or Manual, depending on your preference
+  name: Ansible Automation Platform # The exact name of the Operator as found in OperatorHub
+  source: redhat-operators # Or the appropriate source (e.g., "redhat-certified-operator-index", "community-operators")
+  sourceNamespace: openshift-marketplace # Typically "openshift-marketplace"
