@@ -1,0 +1,8 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: argo-aap # Choose a descriptive name
+  namespace: argo-aap # The namespace where the Operator will be installed
+spec:
+  targetNamespaces:
+  - argo-aap # List the namespaces where the Operator will manage resources
